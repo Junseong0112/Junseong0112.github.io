@@ -2,6 +2,9 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { Player } from "@lottiefiles/react-lottie-player";
+// import Runman from "./Lottie/runman.json";
+import Human from "./Lottie/human.json";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,6 +29,18 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">컨텐츠가 변경되었습니다.</p>
+      {/* <Player
+        autoplay
+        loop
+        src={Runman}
+        style={{ height: "300px", width: "300px" }}
+      /> */}
+      <Player
+        autoplay
+        loop
+        src={Human}
+        style={{ height: "300px", width: "300px" }}
+      />
     </>
   );
 }
