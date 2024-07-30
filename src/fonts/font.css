@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "FiraCode";
+  font-weight: 400;
+  src: url("../fonts/FiraCode-Regular.ttf") format("woff");
+}
+@font-face {
+  font-family: "FiraCode";
+  font-weight: 500;
+  src: url("../fonts/FiraCode-Medium.ttf") format("woff");
+}
+@font-face {
+  font-family: "FiraCode";
+  font-weight: 600;
+  src: url("../fonts/FiraCode-SemiBold.ttf") format("woff");
+}
+@font-face {
+  font-family: "FiraCode";
+  font-weight: 600;
+  src: url("../fonts/FiraCode-SemiBold.ttf") format("woff");
+}
+@font-face {
+  font-family: "NixGon";
+  font-weight: 500;
+  src: url("../fonts/NIXGONFONTS\ M\ 2.0.ttf") format("woff");
+}
+@font-face {
+  font-family: "NixGon";
+  font-weight: 600;
+  src: url("../fonts/NIXGONFONTS\ B\ 2.0.ttf") format("woff");
+}

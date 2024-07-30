@@ -3,7 +3,7 @@ import RunMan from "../Lottie/runman.json";
 
 export default function Main() {
   return (
-    <>
+    <main>
       <h1>
         <span>코</span>
         <span>드</span>
@@ -13,7 +13,7 @@ export default function Main() {
         <span>다.</span>
       </h1>
       <div>
-        <h2>Front-End Developer</h2>
+        <h2 className="eng">Front-End Developer</h2>
         <Player
           autoplay
           loop
@@ -21,6 +21,6 @@ export default function Main() {
           style={{ height: "200px", width: "200px" }}
         />
       </div>
-    </>
+    </main>
   );
 }
