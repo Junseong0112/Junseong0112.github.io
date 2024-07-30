@@ -5,7 +5,7 @@ export default function Main() {
   return (
     <main>
       <h1>
-        <span>코</span>
+        <span className="underline">코</span>
         <span>드</span>
         <span>를</span>
         <span>그</span>
