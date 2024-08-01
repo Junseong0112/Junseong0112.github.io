@@ -3,22 +3,23 @@ import RunMan from "../Lottie/runman.json";
 
 export default function Main() {
   return (
-    <main>
-      <h1>
-        <span className="underline">코</span>
-        <span>드</span>
-        <span>를</span>
-        <span>그</span>
-        <span>리</span>
-        <span>다.</span>
+    <main className="flex flex-col justify-center h-screen gap-14">
+      <h1 className="flex flex-col gap-3 ">
+        <span className="text-6xl">코</span>
+        <span className="text-6xl">드</span>
+        <span className="text-6xl">를</span>
+        <span className="text-6xl">그</span>
+        <span className="text-6xl">리</span>
+        <span className="text-6xl">다.</span>
       </h1>
-      <div>
-        <h2 className="eng">Front-End Developer</h2>
+      <div className="relative flex items-end">
+        <h2 className="text-5xl font-normal eng">Front-End Developer</h2>
         <Player
           autoplay
           loop
           src={RunMan}
-          style={{ height: "200px", width: "200px" }}
+          style={{ height: "150px", position: "relative", right: "60px" }}
+          className="animate-pulse-3"
         />
       </div>
     </main>

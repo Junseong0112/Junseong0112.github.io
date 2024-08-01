@@ -23,6 +23,11 @@ body {
   font-weight: 500;
 }
 
+#root {
+  margin: 0 120px;
+  min-height: 100vh;
+}
+
 .eng {
   font-family: "FiraCode";
 }
