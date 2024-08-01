@@ -3,8 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      orange: "FF4D00",
-      "black-gray": "393939",
+      orange: "#FF4D00",
+      black: "#393939",
     },
     extend: {
       animation: {
