@@ -2,7 +2,7 @@
 import RunMan from "../Lottie/runman.json?url";
 import TypedText from "../components/TypedText";
 import LottiePlayer from "../components/LottiePlayer";
-import Arrow from "../assets/arrow.svg";
+import Arrow from "../assets/arrow.svg?react";
 
 export default function Main() {
   return (
