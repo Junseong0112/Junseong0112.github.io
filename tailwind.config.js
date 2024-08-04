@@ -6,6 +6,11 @@ export default {
       orange: "#FF4D00",
       black: "#393939",
     },
+    fontSize: {
+      32: "32px",
+      62: "62px",
+      48: "48px",
+    },
     extend: {
       animation: {
         "bounce-1.25": "bounce 1.25s infinite",

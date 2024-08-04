@@ -5,7 +5,7 @@ export default function TypedText() {
     <ReactTyped
       strings={["Front-End Developer"]}
       typeSpeed={140}
-      className="text-4xl font-normal eng"
+      className="font-normal text-48 eng"
     />
   );
 }
