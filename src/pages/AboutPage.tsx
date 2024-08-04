@@ -1,3 +1,11 @@
+import Navigation from "../components/Navigation";
+import Title from "../components/Title";
+
 export default function AboutPage() {
-  return <main>About 페이지입니다</main>;
+  return (
+    <main className="pt-50 pb-50">
+      <Title value="About" />
+      <Navigation />
+    </main>
+  );
 }
