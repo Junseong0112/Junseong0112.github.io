@@ -6,7 +6,7 @@ import Arrow from "../assets/arrow.svg?react";
 
 export default function Main() {
   return (
-    <main className="relative flex flex-col justify-between p-pt-main">
+    <main className="relative flex flex-col justify-center h-full gap-8 p-pt-main">
       <h1 className="flex flex-col gap-5 text-orange">
         <span className="text-5xl ">코</span>
         <span className="text-5xl ">드</span>
