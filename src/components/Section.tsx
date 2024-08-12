@@ -3,9 +3,10 @@ import { useEffect, useRef, useState } from "react";
 interface Props {
   id: string;
   children: React.ReactNode;
+  onVisibilityChange: (id: string, isVisible: boolean) => void;
 }
 
-export default function Section({ id, children }: Props) {
+export default function Section({ id, children, onVisibilityChange }: Props) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -18,6 +19,9 @@ export default function Section({ id, children }: Props) {
         //   console.log(`Section ${id} is visible`);
         //   console.log(isVisible);
         // }
+        const newIsVisible = entry.isIntersecting;
+        setIsVisible(newIsVisible);
+        onVisibilityChange(id, newIsVisible);
       },
       { threshold: 0.5 } // 50% 이상 보일 때 트리거
     );
@@ -26,12 +30,12 @@ export default function Section({ id, children }: Props) {
       observer.observe(sectionRef.current);
     }
 
-    // return () => {
-    //   if (sectionRef.current) {
-    //     observer.unobserve(sectionRef.current);
-    //   }
-    // };
-  }, [id]);
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [id, onVisibilityChange]);
 
   return (
     <div
