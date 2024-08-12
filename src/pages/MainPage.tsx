@@ -2,8 +2,8 @@
 import RunMan from "../Lottie/runman.json?url";
 import TypedText from "../components/TypedText";
 import LottiePlayer from "../components/LottiePlayer";
-import Arrow from "../assets/arrow.svg?react";
 import MainSpan from "../components/MainSpan";
+import Icon from "../components/Icon";
 
 export default function Main() {
   return (
@@ -19,7 +19,7 @@ export default function Main() {
         />
       </div>
       <div className="absolute left-2/4 bottom-[50px]">
-        <Arrow className="animate-bounce-1.25" />
+        <Icon name="arrow" className="animate-bounce-1.25" />
       </div>
     </main>
   );
