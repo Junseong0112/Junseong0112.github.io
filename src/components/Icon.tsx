@@ -38,5 +38,7 @@ export default function Icon({ name, ...props }: IconProps) {
       return <SVGIcon.ModalGithub {...props} />;
     case "velog":
       return <SVGIcon.Velog {...props} />;
+    default:
+      return null;
   }
 }
