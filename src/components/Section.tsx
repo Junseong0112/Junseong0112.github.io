@@ -11,14 +11,10 @@ export default function Section({ id, children, onVisibilityChange }: Props) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
+    const SectionRefCurrent = sectionRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-        // if (entry.isIntersecting) {
-        //   // 섹션이 화면에 보일 때 실행할 로직
-        //   console.log(`Section ${id} is visible`);
-        //   console.log(isVisible);
-        // }
         const newIsVisible = entry.isIntersecting;
         setIsVisible(newIsVisible);
         onVisibilityChange(id, newIsVisible);
@@ -26,13 +22,13 @@ export default function Section({ id, children, onVisibilityChange }: Props) {
       { threshold: 0.5 } // 50% 이상 보일 때 트리거
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (SectionRefCurrent) {
+      observer.observe(SectionRefCurrent);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (SectionRefCurrent) {
+        observer.unobserve(SectionRefCurrent);
       }
     };
   }, [id, onVisibilityChange]);
