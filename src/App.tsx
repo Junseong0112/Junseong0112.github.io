@@ -7,6 +7,25 @@ import StudyPage from "./pages/StudyPage";
 import WorkPage from "./pages/WorkPage";
 import Navigation from "./components/Navigation";
 
+const sectionID: string[] = ["main", "about", "study", "work", "footer"];
+
+const renderPage = (id: string) => {
+  switch (id) {
+    case "main":
+      return <MainPage />;
+    case "about":
+      return <AboutPage />;
+    case "study":
+      return <StudyPage />;
+    case "work":
+      return <WorkPage />;
+    case "footer":
+      return <FooterPage />;
+    default:
+      return null;
+  }
+};
+
 function App() {
   const [currentSection, setCurrentSection] = useState<string>("main");
 
@@ -17,21 +36,11 @@ function App() {
   };
   return (
     <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
-      <Section id="main" onVisibilityChange={handleVisibilityChange}>
-        <MainPage />
-      </Section>
-      <Section id="about" onVisibilityChange={handleVisibilityChange}>
-        <AboutPage />
-      </Section>
-      <Section id="study" onVisibilityChange={handleVisibilityChange}>
-        <StudyPage />
-      </Section>
-      <Section id="work" onVisibilityChange={handleVisibilityChange}>
-        <WorkPage />
-      </Section>
-      <Section id="footer" onVisibilityChange={handleVisibilityChange}>
-        <FooterPage />
-      </Section>
+      {sectionID.map((id) => (
+        <Section key={id} id={id} onVisibilityChange={handleVisibilityChange}>
+          {renderPage(id)}
+        </Section>
+      ))}
       <Navigation
         isVisible={currentSection !== "main" && currentSection !== "footer"}
       />
